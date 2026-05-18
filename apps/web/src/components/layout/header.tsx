@@ -88,7 +88,7 @@ export function Header() {
             </div>
 
             <div className="flex-1 overflow-y-auto px-6 py-8">
-              <p className="text-[10px] font-semibold uppercase tracking-widest text-stone-cream/40 mb-5">
+              <p className="text-[10px] font-semibold uppercase tracking-widest text-stone-cream/65 mb-5">
                 Navegación
               </p>
               <nav>
@@ -113,7 +113,7 @@ export function Header() {
             </div>
 
             <div className="px-6 py-6 border-t border-white/10">
-              <p className="text-[10px] font-semibold uppercase tracking-widest text-stone-cream/40 mb-4">
+              <p className="text-[10px] font-semibold uppercase tracking-widest text-stone-cream/65 mb-4">
                 Acciones
               </p>
               <div className="flex flex-col gap-3">

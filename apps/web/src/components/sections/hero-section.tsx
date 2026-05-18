@@ -122,7 +122,7 @@ export function HeroSection() {
               <span className="text-copper">en Salta.</span>
             </motion.h1>
 
-            <motion.p variants={item} className="text-neutral-400 text-lg md:text-xl max-w-lg leading-relaxed mb-10">
+            <motion.p variants={item} className="text-neutral-300 text-lg md:text-xl max-w-lg leading-relaxed mb-10">
               Coworking, oficinas privadas y eventos. Dos sedes.
             </motion.p>
 
@@ -186,7 +186,7 @@ export function HeroSection() {
 
             {/* Badge flotante */}
             <div className="mt-4 flex justify-end">
-              <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-neutral-800 border border-neutral-700 text-[10px] text-neutral-400 font-medium">
+              <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-neutral-800 border border-neutral-700 text-[10px] text-neutral-300 font-medium">
                 <span className="w-1.5 h-1.5 rounded-full bg-success animate-pulse" />
                 Abierto ahora · Lun – Vie
               </span>
@@ -209,7 +209,7 @@ function Stat({ value, label }: { value: string; label: string }) {
   return (
     <div>
       <p className="font-display font-black text-2xl text-stone-cream leading-none">{value}</p>
-      <p className="text-xs text-neutral-500 mt-0.5 font-medium tracking-wide uppercase">{label}</p>
+      <p className="text-xs text-neutral-400 mt-0.5 font-medium tracking-wide uppercase">{label}</p>
     </div>
   );
 }
@@ -252,7 +252,7 @@ function SedePanel({
           <p className="font-display font-black text-xl text-stone-cream leading-none" style={{ color: accentColor }}>
             {stat}
           </p>
-          <p className="text-[10px] text-neutral-500 mt-0.5">{statLabel}</p>
+          <p className="text-[10px] text-neutral-400 mt-0.5">{statLabel}</p>
         </div>
       </div>
     </div>

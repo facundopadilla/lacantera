@@ -33,7 +33,7 @@ export default function ContactoPage() {
                   <br />
                   <span className="text-copper">una visita.</span>
                 </Heading>
-                <p className="text-neutral-400 text-lg max-w-md leading-relaxed">
+                <p className="text-neutral-300 text-lg max-w-md leading-relaxed">
                   Si querés conocer el espacio, escribinos por WhatsApp o completá el formulario.
                 </p>
               </MotionSection>
@@ -45,7 +45,7 @@ export default function ContactoPage() {
                     <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
                     Respuesta en menos de 24hs
                   </span>
-                  <p className="text-xs text-neutral-500">Lunes a viernes, 9:00 – 20:00 hs</p>
+                  <p className="text-xs text-neutral-400">Lunes a viernes, 9:00 – 20:00 hs</p>
                 </div>
               </MotionSection>
             </div>

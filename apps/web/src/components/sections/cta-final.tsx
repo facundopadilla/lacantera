@@ -25,7 +25,7 @@ export function CtaFinal() {
           >
             Conocé el espacio antes de decidir.
           </h2>
-          <p className="text-neutral-400 text-lg max-w-md leading-relaxed mb-10">
+          <p className="text-neutral-300 text-lg max-w-md leading-relaxed mb-10">
             Vení a conocer el espacio. Solo escribinos.
           </p>
           <div className="flex flex-wrap items-center gap-4">

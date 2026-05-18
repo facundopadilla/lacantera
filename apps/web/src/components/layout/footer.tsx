@@ -112,7 +112,7 @@ export function Footer() {
               </div>
               <a
                 href="mailto:lacantera1380@gmail.com"
-                className="flex items-center gap-2 text-stone-cream/60 hover:text-copper text-sm transition-colors"
+                className="flex items-center gap-2 text-stone-cream/75 hover:text-copper text-sm transition-colors"
               >
                 <Mail size={14} strokeWidth={1.5} />
                 lacantera1380@gmail.com
@@ -122,7 +122,7 @@ export function Footer() {
 
           {/* Col 2: Navegación */}
           <div>
-            <p className="text-xs font-bold uppercase tracking-widest text-stone-cream/60 mb-4">
+            <p className="text-xs font-bold uppercase tracking-widest text-stone-cream/85 mb-4">
               Navegación
             </p>
             <ul className="flex flex-col gap-2">
@@ -141,7 +141,7 @@ export function Footer() {
 
           {/* Col 3: Mini-cards sedes */}
           <div>
-            <p className="text-xs font-bold uppercase tracking-widest text-stone-cream/60 mb-4">
+            <p className="text-xs font-bold uppercase tracking-widest text-stone-cream/85 mb-4">
               Nuestras sedes
             </p>
             <div className="flex flex-col gap-3">
@@ -162,14 +162,14 @@ export function Footer() {
                       href={sede.googleMapsUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1 text-stone-cream/60 hover:text-copper text-xs transition-colors"
+                      className="inline-flex items-center gap-1 text-stone-cream/75 hover:text-copper text-xs transition-colors"
                     >
                       <MapPin size={11} />
                       Ver en Maps
                     </a>
                     <a
                       href={`tel:+54${sede.telefono.replace(/\s/g, "")}`}
-                      className="text-stone-cream/60 text-xs hover:text-copper transition-colors"
+                      className="text-stone-cream/75 text-xs hover:text-copper transition-colors"
                     >
                       {sede.telefono}
                     </a>
@@ -182,7 +182,7 @@ export function Footer() {
 
         <div className="h-px bg-gradient-to-r from-transparent via-copper/30 to-transparent my-8" />
 
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-stone-cream/40">
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-stone-cream/65">
           <p>© {new Date().getFullYear()} La Cantera Workspace. Todos los derechos reservados.</p>
           <div className="flex gap-4">
             <Link href="/privacidad" className="hover:text-copper transition-colors">

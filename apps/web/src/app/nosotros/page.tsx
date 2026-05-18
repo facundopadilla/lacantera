@@ -41,7 +41,7 @@ export default function NosotrosPage() {
               <Heading as="h1" size="xl" className="text-stone-cream mb-4">
                 Hicimos el espacio que faltaba en Salta.
               </Heading>
-              <p className="text-neutral-400 text-lg max-w-lg leading-relaxed">
+              <p className="text-neutral-300 text-lg max-w-lg leading-relaxed">
                 Un coworking de Salta, para la forma en que se trabaja acá.
               </p>
             </MotionSection>

@@ -47,7 +47,7 @@ export default function EventosPage() {
                 <br />
                 <span className="text-copper">tu próximo evento.</span>
               </Heading>
-              <p className="text-neutral-400 text-lg max-w-lg leading-relaxed">
+              <p className="text-neutral-300 text-lg max-w-lg leading-relaxed">
                 Dos opciones en Salta. Anfiteatro en Balcarce, salón en Deán Funes.
               </p>
             </MotionSection>

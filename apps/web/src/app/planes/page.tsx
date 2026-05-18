@@ -134,7 +134,7 @@ export default function PlanesPage() {
               <Heading as="h1" size="xl" className="text-stone-cream mb-4">
                 Planes que se ajustan a cómo trabajás.
               </Heading>
-              <p className="text-neutral-400 text-lg max-w-lg leading-relaxed">
+              <p className="text-neutral-300 text-lg max-w-lg leading-relaxed">
                 Mes a mes. Sin letra chica.
               </p>
             </MotionSection>

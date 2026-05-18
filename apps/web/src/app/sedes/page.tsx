@@ -51,7 +51,7 @@ export default function SedesPage() {
               <Heading as="h1" size="xl" className="text-stone-cream mb-4">
                 Dos sedes en Salta
               </Heading>
-              <p className="text-neutral-400 text-lg max-w-xl leading-relaxed">
+              <p className="text-neutral-300 text-lg max-w-xl leading-relaxed">
                 En las dos: internet de 300 MB, café incluido y comunidad activa.
               </p>
             </MotionSection>
