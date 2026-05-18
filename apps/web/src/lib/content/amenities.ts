@@ -1,0 +1,111 @@
+import type { SedeId } from "./sedes";
+
+export interface Amenity {
+  id: string;
+  nombre: string;
+  descripcion: string;
+  icon: string;
+  sedes: SedeId[];
+}
+
+export const amenities: Amenity[] = [
+  {
+    id: "internet",
+    nombre: "Internet 300 MB",
+    descripcion: "Fibra óptica de 300 MB simétricos, estable y rápida.",
+    icon: "Wifi",
+    sedes: ["dean-funes", "balcarce"],
+  },
+  {
+    id: "bar",
+    nombre: "Bar incluido",
+    descripcion: "Café, mate, té, leche y snacks. Cerveza incluida al final del día.",
+    icon: "Coffee",
+    sedes: ["dean-funes", "balcarce"],
+  },
+  {
+    id: "lockers",
+    nombre: "Lockers seguros",
+    descripcion: "Casillero personal con llave.",
+    icon: "LockKeyhole",
+    sedes: ["dean-funes", "balcarce"],
+  },
+  {
+    id: "sala-reuniones",
+    nombre: "Sala de reuniones",
+    descripcion: "4 horas mensuales incluidas en tu membresía. Horas adicionales con descuento.",
+    icon: "Users",
+    sedes: ["dean-funes", "balcarce"],
+  },
+  {
+    id: "acceso",
+    nombre: "Acceso con huella",
+    descripcion: "Acceso controlado con huella digital de lunes a viernes de 9 a 20 hs.",
+    icon: "Fingerprint",
+    sedes: ["dean-funes", "balcarce"],
+  },
+  {
+    id: "seguridad",
+    nombre: "Monitoreo HD 24/7",
+    descripcion: "Cámaras de seguridad en todo el espacio, las 24 horas.",
+    icon: "ShieldCheck",
+    sedes: ["dean-funes", "balcarce"],
+  },
+  {
+    id: "print",
+    nombre: "Print zone",
+    descripcion: "Impresión y escaneo.",
+    icon: "Printer",
+    sedes: ["dean-funes", "balcarce"],
+  },
+  {
+    id: "mail",
+    nombre: "Mail reception",
+    descripcion: "Recibimos tu correspondencia y paquetes.",
+    icon: "Mail",
+    sedes: ["dean-funes", "balcarce"],
+  },
+  {
+    id: "bici",
+    nombre: "Bike parking",
+    descripcion: "Estacionamiento seguro para bicicletas.",
+    icon: "Bike",
+    sedes: ["dean-funes", "balcarce"],
+  },
+  {
+    id: "patio",
+    nombre: "Patio exterior",
+    descripcion: "Espacio al aire libre para descansar o trabajar.",
+    icon: "Trees",
+    sedes: ["balcarce"],
+  },
+  {
+    id: "anfiteatro",
+    nombre: "Anfiteatro",
+    descripcion: "Espacio para eventos y presentaciones hasta 45 personas.",
+    icon: "Theater",
+    sedes: ["balcarce"],
+  },
+  {
+    id: "salon-eventos",
+    nombre: "Salón de eventos",
+    descripcion: "Salón para capacitaciones y presentaciones hasta 40 personas.",
+    icon: "CalendarDays",
+    sedes: ["dean-funes"],
+  },
+  {
+    id: "phone-booth",
+    nombre: "Phone booth",
+    descripcion: "Cabina aislada para llamadas y reuniones virtuales.",
+    icon: "Phone",
+    sedes: ["dean-funes"],
+  },
+];
+
+export function getAmenitiesForSede(sedeId: SedeId): Amenity[] {
+  return amenities.filter((a) => a.sedes.includes(sedeId));
+}
+
+export function getSharedAmenities(): Amenity[] {
+  return amenities.filter((a) => a.sedes.length === 2);
+}

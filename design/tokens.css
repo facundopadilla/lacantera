@@ -1,0 +1,105 @@
+/**
+ * La Cantera Design Tokens
+ * Fuente de verdad para colores, tipografía y espaciado.
+ * IMPORTANTE: No editar directamente — editar design/tokens.json y regenerar.
+ * También consumido por apps/web/tailwind.config.ts y apps/web/src/app/globals.css
+ */
+
+:root {
+  /* ─── Color: Primarios ─────────────────────────────────────────────────── */
+  --color-stone-deep:  #2A2520;   /* basalto — fondos oscuros, texto principal */
+  --color-stone-cream: #F4EFE6;   /* caliza — fondo claro principal */
+
+  /* ─── Color: Secundario ────────────────────────────────────────────────── */
+  --color-copper: #B8703A;        /* veta de cobre — CTAs, hovers, acentos */
+
+  /* ─── Color: Acentos por sede ──────────────────────────────────────────── */
+  --color-accent-dean:     #7A8C5C;  /* verde mineral apagado — Deán Funes */
+  --color-accent-balcarce: #9B4A3F;  /* terracota profundo — Balcarce */
+
+  /* ─── Color: Neutrales minerales ───────────────────────────────────────── */
+  --color-neutral-50:  #FAF7F2;
+  --color-neutral-100: #EDE7DD;
+  --color-neutral-200: #D6CDBE;
+  --color-neutral-300: #BFB5A4;
+  --color-neutral-400: #9C9081;
+  --color-neutral-500: #7A7066;
+  --color-neutral-600: #5C5448;
+  --color-neutral-700: #46413B;
+  --color-neutral-800: #36302A;
+  --color-neutral-900: #26211D;
+  --color-neutral-950: #1A1612;
+
+  /* ─── Color: Semánticos ────────────────────────────────────────────────── */
+  --color-success: #5E7A4D;
+  --color-warning: #C99852;
+  --color-danger:  #A8453A;
+  --color-info:    #4A6A78;
+
+  /* ─── Color: Sistema letras/colores Balcarce (microacentos) ───────────── */
+  --color-letter-a: #B8703A;
+  --color-letter-b: #7A8C5C;
+  --color-letter-c: #9B4A3F;
+  --color-letter-d: #C99852;
+  --color-letter-e: #4A6A78;
+  --color-letter-f: #7C5E8A;
+
+  /* ─── Tipografía ────────────────────────────────────────────────────────── */
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-sans:    'Manrope', system-ui, -apple-system, sans-serif;
+  --font-mono:    'JetBrains Mono', 'Courier New', monospace;
+
+  /* ─── Escala tipográfica ────────────────────────────────────────────────── */
+  --text-xs:   0.75rem;    --leading-xs:   1.125rem;
+  --text-sm:   0.875rem;   --leading-sm:   1.375rem;
+  --text-md:   1rem;       --leading-md:   1.625rem;
+  --text-lg:   1.125rem;   --leading-lg:   1.75rem;
+  --text-xl:   1.25rem;    --leading-xl:   1.875rem;
+  --text-2xl:  1.5rem;     --leading-2xl:  2rem;
+  --text-3xl:  1.875rem;   --leading-3xl:  2.375rem;
+  --text-4xl:  2.25rem;    --leading-4xl:  2.75rem;
+  --text-5xl:  3rem;       --leading-5xl:  3.5rem;
+  --text-6xl:  3.75rem;    --leading-6xl:  4.25rem;
+  --text-7xl:  4.5rem;     --leading-7xl:  5rem;
+
+  /* ─── Espaciado ─────────────────────────────────────────────────────────── */
+  --space-1:  0.25rem;   /* 4px  */
+  --space-2:  0.5rem;    /* 8px  */
+  --space-3:  0.75rem;   /* 12px */
+  --space-4:  1rem;      /* 16px */
+  --space-5:  1.25rem;   /* 20px */
+  --space-6:  1.5rem;    /* 24px */
+  --space-8:  2rem;      /* 32px */
+  --space-10: 2.5rem;    /* 40px */
+  --space-12: 3rem;      /* 48px */
+  --space-16: 4rem;      /* 64px */
+  --space-20: 5rem;      /* 80px */
+  --space-24: 6rem;      /* 96px */
+  --space-32: 8rem;      /* 128px */
+  --space-40: 10rem;     /* 160px */
+  --space-48: 12rem;     /* 192px */
+  --space-64: 16rem;     /* 256px */
+
+  /* ─── Radios ─────────────────────────────────────────────────────────────── */
+  --radius-sm:   0.25rem;
+  --radius-md:   0.5rem;
+  --radius-lg:   0.75rem;
+  --radius-xl:   1rem;
+  --radius-2xl:  1.5rem;
+  --radius-full: 9999px;
+
+  /* ─── Sombras ────────────────────────────────────────────────────────────── */
+  --shadow-sm:      0 1px 2px 0 rgba(42, 37, 32, 0.08);
+  --shadow-md:      0 4px 8px -1px rgba(42, 37, 32, 0.12), 0 2px 4px -1px rgba(42, 37, 32, 0.08);
+  --shadow-lg:      0 12px 24px -4px rgba(42, 37, 32, 0.16), 0 4px 8px -2px rgba(42, 37, 32, 0.10);
+  --shadow-mineral: 0 8px 20px -4px rgba(184, 112, 58, 0.18), 0 2px 6px -1px rgba(42, 37, 32, 0.12);
+
+  /* ─── Animaciones ────────────────────────────────────────────────────────── */
+  --ease-out-quart:    cubic-bezier(0.25, 1, 0.5, 1);
+  --ease-in-out-cubic: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-spring:       cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  --duration-fast:   150ms;
+  --duration-normal: 250ms;
+  --duration-slow:   400ms;
+}

@@ -1,0 +1,113 @@
+@import "tailwindcss";
+
+/**
+ * La Cantera Design Tokens — Tailwind v4 @theme
+ * Las utilities de Tailwind se generan desde estos valores.
+ * Para preview standalone ver design/tokens.css
+ */
+@theme {
+  /* ─── Fuentes ────────────────────────────────────────────── */
+  --font-display: var(--font-fraunces);
+  --font-sans:    var(--font-manrope);
+
+  /* ─── Colores primarios ──────────────────────────────────── */
+  --color-stone-deep:  #2A2520;
+  --color-stone-cream: #F4EFE6;
+  --color-copper:      #B8703A;
+  --color-copper-dark: #a3622f;
+
+  /* ─── Acentos de sede ────────────────────────────────────── */
+  --color-accent-dean:     #7A8C5C;
+  --color-accent-balcarce: #9B4A3F;
+
+  /* ─── Neutrales minerales ────────────────────────────────── */
+  --color-neutral-50:  #FAF7F2;
+  --color-neutral-100: #EDE7DD;
+  --color-neutral-200: #D6CDBE;
+  --color-neutral-300: #BFB5A4;
+  --color-neutral-400: #9C9081;
+  --color-neutral-500: #7A7066;
+  --color-neutral-600: #5C5448;
+  --color-neutral-700: #46413B;
+  --color-neutral-800: #36302A;
+  --color-neutral-900: #26211D;
+  --color-neutral-950: #1A1612;
+
+  /* ─── Semánticos ─────────────────────────────────────────── */
+  --color-success: #5E7A4D;
+  --color-warning: #C99852;
+  --color-danger:  #A8453A;
+  --color-info:    #4A6A78;
+
+  /* ─── Sistema letras Balcarce ────────────────────────────── */
+  --color-letter-a: #B8703A;
+  --color-letter-b: #7A8C5C;
+  --color-letter-c: #9B4A3F;
+  --color-letter-d: #C99852;
+  --color-letter-e: #4A6A78;
+  --color-letter-f: #7C5E8A;
+
+  /* ─── Sombras personalizadas ─────────────────────────────── */
+  --shadow-mineral: 0 8px 20px -4px rgba(184, 112, 58, 0.18), 0 2px 6px -1px rgba(42, 37, 32, 0.12);
+  --shadow-stone:   0 4px 8px -1px rgba(42, 37, 32, 0.12), 0 2px 4px -1px rgba(42, 37, 32, 0.08);
+
+  /* ─── Animaciones ────────────────────────────────────────── */
+  --ease-out-quart:    cubic-bezier(0.25, 1, 0.5, 1);
+  --ease-in-out-cubic: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-spring:       cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* ─── Base styles ────────────────────────────────────────── */
+@layer base {
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    font-family: var(--font-manrope), system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-fraunces), Georgia, serif;
+    letter-spacing: -0.02em;
+  }
+
+  h1 { font-weight: 900; }
+  h2 { font-weight: 700; }
+  h3 { font-weight: 600; }
+  h4 { font-weight: 600; }
+
+  /* Drop cap editorial para /nosotros */
+  .prose-drop-cap > p:first-of-type::first-letter {
+    font-family: var(--font-fraunces), Georgia, serif;
+    font-weight: 900;
+    font-size: 4em;
+    float: left;
+    line-height: 0.85;
+    margin: 0.05em 0.12em 0 0;
+    color: var(--color-copper);
+  }
+}
+
+/* ─── Entry animations (Fluid CSS + prefers-reduced-motion) ─ */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [style*="animation"],
+  .animate-fade-up {
+    animation: none !important;
+    transition: none !important;
+  }
+}
