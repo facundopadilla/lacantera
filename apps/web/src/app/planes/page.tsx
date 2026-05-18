@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { Check, X, ArrowRight, Home, Briefcase, HelpCircle } from "lucide-react";
+import { Check, X, ArrowRight, Home, Briefcase, HelpCircle, MessageCircle } from "lucide-react";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { CtaFloating } from "@/components/layout/cta-floating";
@@ -22,7 +22,7 @@ import type { Plan } from "@/lib/content/planes";
 export const metadata: Metadata = {
   title: "Planes y precios",
   description:
-    "¡Hay un plan para vos! Bronce, Plata, Oro, Oro Blanco y Premium. Con descuento para residentes del edificio y convenios profesionales.",
+    "Bronce, Plata, Oro y planes personalizados. Con descuento para residentes del edificio y convenios profesionales.",
 };
 
 function PlanCard({ plan, featured }: { plan: Plan; featured?: boolean }) {
@@ -39,11 +39,6 @@ function PlanCard({ plan, featured }: { plan: Plan; featured?: boolean }) {
           Popular
         </div>
       )}
-      {plan.id === "premium" && (
-        <div className="absolute top-3 right-3 bg-stone-deep text-stone-cream text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded-full">
-          Premium
-        </div>
-      )}
 
       <div className="h-1" style={{ backgroundColor: plan.color }} />
 
@@ -52,16 +47,11 @@ function PlanCard({ plan, featured }: { plan: Plan; featured?: boolean }) {
           {/* Double-Bezel letter tile */}
           <div
             className="w-12 h-12 shrink-0 p-0.5 rounded-xl"
-            style={{
-              backgroundColor: plan.id === "oro-blanco" ? "#D6CDBE" : `${plan.color}30`,
-            }}
+            style={{ backgroundColor: `${plan.color}30` }}
           >
             <div
               className="w-full h-full rounded-[10px] flex items-center justify-center font-display font-black text-xl"
-              style={{
-                backgroundColor: plan.color,
-                color: plan.id === "oro-blanco" ? "#2A2520" : "white",
-              }}
+              style={{ backgroundColor: plan.color, color: "white" }}
             >
               {plan.letra}
             </div>
@@ -118,8 +108,6 @@ export default function PlanesPage() {
     planes.find((p) => p.id === "bronce"),
     planes.find((p) => p.id === "plata"),
     planes.find((p) => p.id === "oro"),
-    planes.find((p) => p.id === "oro-blanco"),
-    planes.find((p) => p.id === "premium"),
   ].filter(Boolean) as Plan[];
 
   return (
@@ -164,6 +152,32 @@ export default function PlanesPage() {
                   </SpringCard>
                 ))}
               </MotionStaggerGrid>
+
+              {/* Plan Personalizado */}
+              <div className="mt-8">
+                <a
+                  href="https://wa.me/5493874636952?text=Hola%2C%20me%20interesa%20consultar%20sobre%20un%20plan%20personalizado"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 rounded-2xl bg-stone-deep p-8 border border-white/10 hover:border-copper/50 transition-colors duration-200 group"
+                >
+                  <div>
+                    <span className="text-copper text-xs font-bold uppercase tracking-wider">Plan personalizado</span>
+                    <h3 className="font-display font-bold text-2xl text-stone-cream mt-1 mb-2">
+                      ¿Necesitás algo diferente?
+                    </h3>
+                    <p className="text-neutral-400 text-sm max-w-md leading-relaxed">
+                      Armamos un plan a medida para tu situación. Escribinos por WhatsApp y lo charlamos.
+                    </p>
+                  </div>
+                  <div className="shrink-0">
+                    <span className="inline-flex items-center gap-2 bg-[#25D366] text-white font-semibold text-sm px-5 py-3 rounded-xl group-hover:bg-[#22c55e] transition-colors">
+                      <MessageCircle size={16} />
+                      Consultar por WhatsApp
+                    </span>
+                  </div>
+                </a>
+              </div>
             </Container>
           </Section>
 
@@ -308,8 +322,8 @@ const faqs = [
     a: "No hay contrato mínimo. Podés empezar mes a mes y decidir si continuás. También hay opciones con descuento para quienes pagan de forma anual.",
   },
   {
-    q: "¿Las 4 horas de sala de reuniones son por persona o por membresía?",
-    a: "Son por membresía individual. Para los planes de oficina (Oro, Oro Blanco, Premium), se calculan por persona del equipo.",
+    q: "¿Cuántas horas de sala incluye cada plan?",
+    a: "Bronce incluye 2 hs/mes, Plata 4 hs/mes y Oro 8 hs/mes. Las horas son por membresía individual y no se acumulan de mes a mes.",
   },
   {
     q: "¿Puedo usar cualquiera de las dos sedes con mi membresía?",
