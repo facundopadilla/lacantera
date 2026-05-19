@@ -105,9 +105,9 @@ function PlanCard({ plan, featured }: { plan: Plan; featured?: boolean }) {
 
 export default function PlanesPage() {
   const sortedPlanes = [
-    planes.find((p) => p.id === "bronce"),
-    planes.find((p) => p.id === "plata"),
     planes.find((p) => p.id === "oro"),
+    planes.find((p) => p.id === "plata"),
+    planes.find((p) => p.id === "bronce"),
   ].filter(Boolean) as Plan[];
 
   return (

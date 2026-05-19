@@ -10,9 +10,9 @@ import { MotionStaggerGrid } from "@/components/motion/motion-stagger-grid";
 import { planes } from "@/lib/content/planes";
 
 const planesPreview = [
-  planes.find((p) => p.id === "bronce")!,
-  planes.find((p) => p.id === "plata")!,
   planes.find((p) => p.id === "oro")!,
+  planes.find((p) => p.id === "plata")!,
+  planes.find((p) => p.id === "bronce")!,
 ];
 
 export function PlanesPreview() {
