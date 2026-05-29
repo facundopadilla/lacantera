@@ -40,7 +40,7 @@ export const amenities: Amenity[] = [
   {
     id: "acceso",
     nombre: "Acceso con huella",
-    descripcion: "Acceso controlado con huella digital de lunes a viernes de 9 a 20 hs.",
+    descripcion: "Acceso controlado con huella digital de lunes a viernes de 9 a 18 hs.",
     icon: "Fingerprint",
     sedes: ["dean-funes", "balcarce"],
   },

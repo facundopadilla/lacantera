@@ -26,7 +26,6 @@ const links = [
   { href: "/sedes",    label: "Nuestros espacios" },
   { href: "/planes",   label: "Planes y precios" },
   { href: "/eventos",  label: "Eventos" },
-  { href: "/nosotros", label: "Quiénes somos" },
   { href: "/contacto", label: "Contacto" },
 ];
 

@@ -9,7 +9,7 @@ import { Eyebrow } from "@/components/ui/eyebrow";
 import { MotionSection } from "@/components/motion/motion-section";
 import { MotionStaggerGrid } from "@/components/motion/motion-stagger-grid";
 import { ContactForm } from "./contact-form";
-import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import { MapPin, Mail, Clock } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Contacto",
@@ -45,7 +45,7 @@ export default function ContactoPage() {
                     <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
                     Respuesta en menos de 24hs
                   </span>
-                  <p className="text-xs text-neutral-400">Lunes a viernes, 9:00 – 20:00 hs</p>
+                  <p className="text-xs text-neutral-400">Horarios de atención: 9:00 a 18:00 hrs</p>
                 </div>
               </MotionSection>
             </div>
@@ -80,13 +80,6 @@ export default function ContactoPage() {
                           {sede.direccion}
                         </div>
                         <a
-                          href={`tel:+54${sede.telefono.replace(/\s/g, "")}`}
-                          className="flex items-center gap-2.5 text-sm text-neutral-600 hover:text-stone-deep"
-                        >
-                          <Phone size={14} className="text-copper shrink-0" />
-                          {sede.telefono}
-                        </a>
-                        <a
                           href={`https://wa.me/${sede.whatsapp}`}
                           target="_blank"
                           rel="noopener noreferrer"
@@ -118,7 +111,7 @@ export default function ContactoPage() {
                     <div className="flex items-start gap-2.5 text-sm text-neutral-500">
                       <Clock size={14} className="text-copper mt-0.5 shrink-0" />
                       <div>
-                        <p>Lunes a viernes, 9:00 – 20:00 hs</p>
+                        <p>Horarios de atención: 9:00 a 18:00 hrs</p>
                         <p className="text-neutral-400 text-xs mt-0.5">
                           Acceso con huella digital fuera de horario
                         </p>

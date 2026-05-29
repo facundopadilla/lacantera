@@ -117,13 +117,13 @@ export function HeroSection() {
               className="font-display font-black text-stone-cream leading-[0.92] tracking-tight mb-8"
               style={{ fontSize: "clamp(3rem, 7.5vw, 6.5rem)" }}
             >
-              Tu lugar para trabajar
+              Tu espacio para crecer,
               <br />
-              <span className="text-copper">en Salta.</span>
+              <span className="text-copper">conectar y crear.</span>
             </motion.h1>
 
             <motion.p variants={item} className="text-neutral-300 text-lg md:text-xl max-w-lg leading-relaxed mb-10">
-              Coworking, oficinas privadas y eventos. Dos sedes.
+              Coworking, oficinas privadas, salas de reunión y eventos en un entorno diseñado para potenciar lo que hacés.
             </motion.p>
 
             <motion.div variants={item} className="flex flex-wrap items-center gap-4">

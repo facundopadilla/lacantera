@@ -16,7 +16,8 @@ import { MotionStaggerGrid } from "@/components/motion/motion-stagger-grid";
 import { StickyTabs } from "@/components/motion/sticky-tabs";
 import { sedes } from "@/lib/content/sedes";
 import { photos } from "@/lib/photos";
-import { MapPin, Phone, MessageCircle } from "lucide-react";
+import * as Icons from "lucide-react";
+import { MapPin, MessageCircle, type LucideIcon } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Nuestros espacios",
@@ -102,13 +103,6 @@ export default function SedesPage() {
                             <MapPin size={14} className="text-copper" />
                             {sede.direccion}
                           </div>
-                          <a
-                            href={`tel:+54${sede.telefono.replace(/\s/g, "")}`}
-                            className="flex items-center gap-2 text-sm text-neutral-600 hover:text-stone-deep"
-                          >
-                            <Phone size={14} className="text-copper" />
-                            {sede.telefono}
-                          </a>
                         </div>
 
                         <div className="grid grid-cols-3 gap-4 py-6 border-t border-b border-neutral-200 mb-8">
@@ -173,21 +167,27 @@ export default function SedesPage() {
                 <Container>
                   <Eyebrow tone="copper" className="mb-6">Espacios disponibles</Eyebrow>
                   <MotionStaggerGrid className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                    {sede.espacios.map((esp) => (
-                      <div
-                        key={esp.nombre}
-                        className="p-1.5 rounded-2xl bg-neutral-50 border border-neutral-200 shadow-[inset_0_1px_0_rgba(255,255,255,0.8)] hover:border-neutral-300 transition-colors"
-                      >
-                        <div className="p-4 rounded-[14px] bg-white flex flex-col gap-3">
-                          <div
-                            className="w-1 h-6 rounded-full"
-                            style={{ backgroundColor: sede.accentColor }}
-                          />
-                          <h3 className="font-semibold text-stone-deep">{esp.nombre}</h3>
-                          <p className="text-sm text-neutral-500 leading-relaxed">{esp.descripcion}</p>
+                    {sede.espacios.map((esp) => {
+                      const Icon =
+                        (Icons as unknown as Record<string, LucideIcon>)[esp.icon] ?? Icons.Square;
+                      return (
+                        <div
+                          key={esp.nombre}
+                          className="h-full p-1.5 rounded-2xl bg-neutral-50 border border-neutral-200 shadow-[inset_0_1px_0_rgba(255,255,255,0.8)] hover:border-neutral-300 transition-colors"
+                        >
+                          <div className="h-full p-5 rounded-[14px] bg-white flex flex-col gap-3">
+                            <div
+                              className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0"
+                              style={{ backgroundColor: `${sede.accentColor}1A` }}
+                            >
+                              <Icon size={18} strokeWidth={1.75} style={{ color: sede.accentColor }} />
+                            </div>
+                            <h3 className="font-semibold text-stone-deep">{esp.nombre}</h3>
+                            <p className="text-sm text-neutral-500 leading-relaxed">{esp.descripcion}</p>
+                          </div>
                         </div>
-                      </div>
-                    ))}
+                      );
+                    })}
                   </MotionStaggerGrid>
                 </Container>
               </Section>

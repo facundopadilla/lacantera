@@ -11,7 +11,7 @@ export interface Sede {
   accentColor: string;
   letra: string;
   stats: { label: string; value: string }[];
-  espacios: { nombre: string; descripcion: string }[];
+  espacios: { nombre: string; descripcion: string; icon: string }[];
   descripcion: string;
   slug: string;
 }
@@ -37,23 +37,28 @@ export const sedes: Sede[] = [
         nombre: "Open Space",
         descripcion:
           "60 estaciones en un espacio abierto e iluminado de 330 m².",
+        icon: "LayoutGrid",
       },
       {
         nombre: "Oficinas privadas",
         descripcion: "6 oficinas privadas para equipos de 3 a 5 personas.",
+        icon: "DoorClosed",
       },
       {
         nombre: "Sala de reuniones",
         descripcion:
           "Sala para 8 personas con pantalla y videoconferencia. 4 hs/mes incluidas.",
+        icon: "Presentation",
       },
       {
         nombre: "Salón de eventos",
         descripcion: "Salón para ~40 personas ideal para capacitaciones y presentaciones.",
+        icon: "PartyPopper",
       },
       {
         nombre: "Phone booth",
         descripcion: "Cabina aislada para llamadas y reuniones virtuales con privacidad.",
+        icon: "Phone",
       },
     ],
     descripcion:
@@ -80,23 +85,28 @@ export const sedes: Sede[] = [
         nombre: "Oficinas privadas A–T",
         descripcion:
           "20 oficinas privadas identificadas con letras y colores únicos. Para 1 a 8 personas.",
+        icon: "DoorClosed",
       },
       {
         nombre: "Anfiteatro",
         descripcion: "Espacio para ~45 personas. Ideal para eventos, talleres y presentaciones.",
+        icon: "Theater",
       },
       {
         nombre: "Sala de reuniones",
         descripcion:
           "Sala para 10 personas. 4 hs/mes incluidas con tu membresía.",
+        icon: "Presentation",
       },
       {
         nombre: "Cocina equipada",
         descripcion: "Cocina completa para los momentos de descanso.",
+        icon: "Coffee",
       },
       {
         nombre: "Patio exterior",
         descripcion: "Espacio al aire libre para desconectarse o trabajar en un ambiente diferente.",
+        icon: "Trees",
       },
     ],
     descripcion:

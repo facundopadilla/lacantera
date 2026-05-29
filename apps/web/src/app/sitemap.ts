@@ -4,7 +4,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://lacanteraws.com";
   const now = new Date();
 
-  const routes = ["/", "/sedes", "/planes", "/eventos", "/nosotros", "/contacto"];
+  const routes = ["/", "/sedes", "/planes", "/eventos", "/contacto"];
 
   return routes.map((route) => ({
     url: `${siteUrl}${route}`,
