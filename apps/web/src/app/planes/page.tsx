@@ -211,7 +211,10 @@ export default function PlanesPage() {
                       placeholder="blur"
                       blurDataURL={photos.descuentoResidente.blurDataURL}
                       className="object-cover"
-                      style={{ filter: "grayscale(70%)" }}
+                      style={{
+                        filter: "grayscale(70%)",
+                        objectPosition: photos.descuentoResidente.objectPosition,
+                      }}
                     />
                     <div className="absolute inset-0 bg-copper/15 pointer-events-none" />
                   </div>

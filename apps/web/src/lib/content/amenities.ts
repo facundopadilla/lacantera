@@ -73,10 +73,10 @@ export const amenities: Amenity[] = [
     sedes: ["dean-funes", "balcarce"],
   },
   {
-    id: "patio",
-    nombre: "Patio exterior",
-    descripcion: "Espacio al aire libre para descansar o trabajar.",
-    icon: "Trees",
+    id: "patio-interno",
+    nombre: "Patios internos",
+    descripcion: "Espacios abiertos dentro del edificio para descansar o trabajar.",
+    icon: "Flower2",
     sedes: ["balcarce"],
   },
   {

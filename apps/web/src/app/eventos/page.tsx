@@ -68,6 +68,7 @@ export default function EventosPage() {
                       width={espacio.photo.width}
                       height={espacio.photo.height}
                       blurDataURL={espacio.photo.blurDataURL}
+                      objectPosition={espacio.photo.objectPosition}
                       variant="editorial"
                       aspect="16/9"
                       sizes="(max-width: 768px) 100vw, 50vw"

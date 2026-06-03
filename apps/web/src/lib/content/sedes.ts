@@ -104,13 +104,14 @@ export const sedes: Sede[] = [
         icon: "Coffee",
       },
       {
-        nombre: "Patio exterior",
-        descripcion: "Espacio al aire libre para desconectarse o trabajar en un ambiente diferente.",
-        icon: "Trees",
+        nombre: "Patios internos",
+        descripcion:
+          "Patios dentro del edificio para descansar, charlar o trabajar en un ambiente más abierto.",
+        icon: "Flower2",
       },
     ],
     descripcion:
-      "20 oficinas privadas, anfiteatro para 45 y patio exterior.",
+      "20 oficinas privadas, patios internos y anfiteatro para 45.",
     slug: "balcarce",
   },
 ];

@@ -55,6 +55,9 @@ function SedeCard({ sede }: { sede: (typeof sedes)[number] }) {
               width={isDean ? photos.sedeDeanFunes.width : photos.sedeBalcarce.width}
               height={isDean ? photos.sedeDeanFunes.height : photos.sedeBalcarce.height}
               blurDataURL={isDean ? photos.sedeDeanFunes.blurDataURL : photos.sedeBalcarce.blurDataURL}
+              objectPosition={
+                isDean ? photos.sedeDeanFunes.objectPosition : photos.sedeBalcarce.objectPosition
+              }
               aspect="16/9"
               sizes="(max-width: 768px) 100vw, 50vw"
               variant="desaturated"

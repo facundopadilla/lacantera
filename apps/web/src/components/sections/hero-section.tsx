@@ -1,15 +1,78 @@
 "use client";
 
 import { useRef } from "react";
-import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
+import {
+  motion,
+  useReducedMotion,
+  useScroll,
+  useTransform,
+  type MotionValue,
+} from "framer-motion";
 import { ArrowRight, MapPin, Building2, Users } from "lucide-react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { MagneticButton } from "@/components/motion/magnetic-button";
+import { BlurRevealHeadline } from "@/components/motion/blur-reveal-headline";
 import { Container } from "@/components/ui/container";
 import { Eyebrow } from "@/components/ui/eyebrow";
+import { cloudinaryVideos } from "@/lib/media";
 import { photos } from "@/lib/photos";
 import { cn } from "@/lib/utils";
+
+function HeroBackgroundMedia({
+  reduced,
+  scale,
+  opacity,
+}: {
+  reduced: boolean;
+  scale?: MotionValue<number>;
+  opacity?: MotionValue<number>;
+}) {
+  const overlay = <div className="absolute inset-0 bg-stone-deep/55" />;
+
+  if (reduced) {
+    return (
+      <div className="absolute inset-0 overflow-hidden">
+        <Image
+          src={photos.heroHome.src}
+          alt=""
+          fill
+          sizes="100vw"
+          priority
+          placeholder="blur"
+          blurDataURL={photos.heroHome.blurDataURL}
+          className="object-cover object-center grayscale"
+          aria-hidden
+        />
+        {overlay}
+      </div>
+    );
+  }
+
+  const video = (
+    <video
+      autoPlay
+      muted
+      loop
+      playsInline
+      preload="metadata"
+      poster={photos.heroHome.src}
+      aria-hidden
+      className="absolute inset-0 h-full w-full object-cover object-center grayscale"
+    >
+      <source src={cloudinaryVideos.heroHome} type="video/mp4" />
+    </video>
+  );
+
+  return (
+    <motion.div className="absolute inset-0 overflow-hidden" style={{ opacity }}>
+      <motion.div className="absolute inset-0" style={{ scale }}>
+        {video}
+        {overlay}
+      </motion.div>
+    </motion.div>
+  );
+}
 
 const variants = {
   hidden: {},
@@ -24,9 +87,10 @@ const item = {
 export function HeroSection() {
   const reduced = useReducedMotion();
   const heroRef = useRef<HTMLElement>(null);
+
   const { scrollYProgress } = useScroll({ target: heroRef, offset: ["start start", "end start"] });
   const imageScale = useTransform(scrollYProgress, [0, 1], [1.05, 1.0]);
-  const imageOpacity = useTransform(scrollYProgress, [0, 0.8], [0.6, 0.2]);
+  const imageOpacity = useTransform(scrollYProgress, [0, 0.8], [1, 0.75]);
 
   return (
     <section
@@ -34,43 +98,12 @@ export function HeroSection() {
       className="relative min-h-[100dvh] flex items-center overflow-hidden bg-stone-deep"
       aria-label="Bienvenido a La Cantera"
     >
-      {/* Foto de fondo full-bleed */}
-      {!reduced ? (
-        <motion.div
-          className="absolute inset-0 overflow-hidden"
-          style={{ opacity: imageOpacity }}
-        >
-          <motion.div className="absolute inset-0" style={{ scale: imageScale }}>
-            <Image
-              src={photos.heroHome.src}
-              alt={photos.heroHome.alt}
-              fill
-              sizes="100vw"
-              priority
-              placeholder="blur"
-              blurDataURL={photos.heroHome.blurDataURL}
-              className="object-cover"
-              style={{ filter: "grayscale(70%)" }}
-            />
-            <div className="absolute inset-0 bg-copper/15" />
-          </motion.div>
-        </motion.div>
-      ) : (
-        <div className="absolute inset-0 overflow-hidden opacity-30">
-          <Image
-            src={photos.heroHome.src}
-            alt={photos.heroHome.alt}
-            fill
-            sizes="100vw"
-            priority
-            placeholder="blur"
-            blurDataURL={photos.heroHome.blurDataURL}
-            className="object-cover"
-            style={{ filter: "grayscale(70%)" }}
-          />
-          <div className="absolute inset-0 bg-copper/15" />
-        </div>
-      )}
+      {/* Video de fondo full-bleed (Cloudinary) */}
+      <HeroBackgroundMedia
+        reduced={!!reduced}
+        scale={reduced ? undefined : imageScale}
+        opacity={reduced ? undefined : imageOpacity}
+      />
 
       {/* Texturas de fondo — pointer-events-none para GPU safety */}
       <div
@@ -112,15 +145,19 @@ export function HeroSection() {
               </Eyebrow>
             </motion.div>
 
-            <motion.h1
-              variants={item}
+            <BlurRevealHeadline
               className="font-display font-black text-stone-cream leading-[0.92] tracking-tight mb-8"
               style={{ fontSize: "clamp(3rem, 7.5vw, 6.5rem)" }}
-            >
-              Tu espacio para crecer,
-              <br />
-              <span className="text-copper">conectar y crear.</span>
-            </motion.h1>
+              delay={0.5}
+              wordClassName={{ "crecer,": "text-copper" }}
+              lines={[
+                { text: "Tu espacio para crecer," },
+                {
+                  text: "conectar y crear.",
+                  stroke: { fill: "#B8703A" },
+                },
+              ]}
+            />
 
             <motion.p variants={item} className="text-neutral-300 text-lg md:text-xl max-w-lg leading-relaxed mb-10">
               Coworking, oficinas privadas, salas de reunión y eventos en un entorno diseñado para potenciar lo que hacés.

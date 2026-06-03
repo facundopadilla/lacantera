@@ -10,12 +10,13 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Eyebrow } from "@/components/ui/eyebrow";
 import { Photo } from "@/components/ui/photo";
+import { PhotoCarousel } from "@/components/ui/photo-carousel";
 import { LetterGrid } from "@/components/brand/letter-tile";
 import { MotionSection } from "@/components/motion/motion-section";
 import { MotionStaggerGrid } from "@/components/motion/motion-stagger-grid";
 import { StickyTabs } from "@/components/motion/sticky-tabs";
 import { sedes } from "@/lib/content/sedes";
-import { photos } from "@/lib/photos";
+import { photos, sedeDeanFunesGallery } from "@/lib/photos";
 import * as Icons from "lucide-react";
 import { MapPin, MessageCircle, type LucideIcon } from "lucide-react";
 
@@ -42,7 +43,10 @@ export default function SedesPage() {
               className="object-cover"
               placeholder="blur"
               blurDataURL={photos.sedeDeanFunes.blurDataURL}
-              style={{ filter: "grayscale(70%)" }}
+              style={{
+                filter: "grayscale(70%)",
+                objectPosition: photos.sedeDeanFunes.objectPosition,
+              }}
             />
             <div className="absolute inset-0 bg-stone-deep/70" />
           </div>
@@ -146,17 +150,25 @@ export default function SedesPage() {
                       </div>
 
                       {/* Foto de sede */}
-                      <Photo
-                        src={isDean ? photos.sedeDeanFunes.src : photos.sedeBalcarce.src}
-                        alt={isDean ? photos.sedeDeanFunes.alt : photos.sedeBalcarce.alt}
-                        width={isDean ? photos.sedeDeanFunes.width : photos.sedeBalcarce.width}
-                        height={isDean ? photos.sedeDeanFunes.height : photos.sedeBalcarce.height}
-                        blurDataURL={isDean ? photos.sedeDeanFunes.blurDataURL : photos.sedeBalcarce.blurDataURL}
-                        variant="editorial"
-                        aspect="4/3"
-                        sizes="(max-width: 1024px) 100vw, 50vw"
-                        className="rounded-2xl overflow-hidden"
-                      />
+                      {isDean ? (
+                        <PhotoCarousel
+                          slides={sedeDeanFunesGallery}
+                          sizes="(max-width: 1024px) 100vw, 50vw"
+                        />
+                      ) : (
+                        <Photo
+                          src={photos.sedeBalcarce.src}
+                          alt={photos.sedeBalcarce.alt}
+                          width={photos.sedeBalcarce.width}
+                          height={photos.sedeBalcarce.height}
+                          blurDataURL={photos.sedeBalcarce.blurDataURL}
+                          objectPosition={photos.sedeBalcarce.objectPosition}
+                          variant="editorial"
+                          aspect="4/3"
+                          sizes="(max-width: 1024px) 100vw, 50vw"
+                          className="rounded-2xl overflow-hidden"
+                        />
+                      )}
                     </div>
                   </MotionSection>
                 </Container>

@@ -32,7 +32,7 @@ El sitio actual tiene fotografías de baja resolución (JPG estándar, no aptas 
 | 2 | **Oficina privada** | Interior de una oficina, 2-3 personas trabajando. |
 | 3 | **Anfiteatro para 45** | El shot "hero" de Balcarce — diferenciador único. Vacío o con evento. |
 | 4 | **Sala de reuniones para 10** | Configurada para reunión. |
-| 5 | **Patio exterior** | El valor diferencial de Balcarce. Personas en pausa o trabajando al aire libre. |
+| 5 | **Patios internos** | Patios dentro del edificio. Personas en pausa o trabajando en un ambiente abierto pero interior. |
 | 6 | **Cocina equipada** | Zona de descanso, foco en la calidez del espacio. |
 | 7 | **Letrero de oficina** | Detalle de una de las letras/colores de identificación de oficina. |
 | 8 | **Fachada / entrada** | Balcarce 735 desde la vereda. |

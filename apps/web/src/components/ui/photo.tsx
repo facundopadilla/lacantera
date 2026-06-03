@@ -1,4 +1,5 @@
 import Image from "next/image";
+import type { CSSProperties } from "react";
 import { cn } from "@/lib/utils";
 
 type PhotoVariant = "desaturated" | "editorial" | "vignette";
@@ -15,6 +16,7 @@ interface PhotoProps {
   priority?: boolean;
   className?: string;
   blurDataURL?: string;
+  objectPosition?: string;
 }
 
 const aspectClasses: Record<PhotoAspect, string> = {
@@ -35,8 +37,14 @@ export function Photo({
   priority = false,
   className,
   blurDataURL,
+  objectPosition,
 }: PhotoProps) {
   const hasAspect = aspect !== undefined;
+
+  const imageStyle: CSSProperties = {
+    objectPosition,
+    ...(variant === "desaturated" ? { filter: "grayscale(70%)" } : {}),
+  };
 
   const imageEl = hasAspect ? (
     <Image
@@ -48,7 +56,7 @@ export function Photo({
       placeholder={blurDataURL ? "blur" : "empty"}
       blurDataURL={blurDataURL}
       className="object-cover"
-      style={variant === "desaturated" ? { filter: "grayscale(70%)" } : undefined}
+      style={imageStyle}
     />
   ) : (
     <Image
@@ -60,7 +68,7 @@ export function Photo({
       placeholder={blurDataURL ? "blur" : "empty"}
       blurDataURL={blurDataURL}
       className="object-cover"
-      style={variant === "desaturated" ? { filter: "grayscale(70%)" } : undefined}
+      style={imageStyle}
     />
   );
 

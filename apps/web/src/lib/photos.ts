@@ -4,6 +4,7 @@ export type PhotoEntry = {
   height: number;
   alt: string;
   blurDataURL: string;
+  objectPosition?: string;
 };
 
 const blur =
@@ -11,25 +12,27 @@ const blur =
 
 export const photos: Record<string, PhotoEntry> = {
   heroHome: {
-    src: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=1920&q=80",
-    width: 1920,
-    height: 1280,
-    alt: "Espacio de coworking con luz cálida y mesas de trabajo",
+    src: "/images/hero-letrero-v2.jpg",
+    width: 682,
+    height: 1024,
+    alt: "Letrero iluminado de La Cantera con sillones naranjas y pared de madera",
     blurDataURL: blur,
   },
   sedeDeanFunes: {
-    src: "https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=1600&q=80",
-    width: 1600,
-    height: 1067,
-    alt: "Espacio de trabajo abierto en Deán Funes",
+    src: "/images/sede-dean-funes-01-entrada.jpg",
+    width: 1024,
+    height: 682,
+    alt: "Entrada de La Cantera Workspace en Deán Funes 1380",
     blurDataURL: blur,
+    objectPosition: "center center",
   },
   sedeBalcarce: {
-    src: "https://images.unsplash.com/photo-1524758631624-e2822e304c36?w=1600&q=80",
-    width: 1600,
-    height: 1067,
-    alt: "Interior de La Cantera Office en Balcarce",
+    src: "/images/sede-balcarce.jpg",
+    width: 1024,
+    height: 1024,
+    alt: "Pasillo de oficinas con señalética de letras en La Cantera Office, Balcarce 735",
     blurDataURL: blur,
+    objectPosition: "center center",
   },
   espacioOficina: {
     src: "https://images.unsplash.com/photo-1497215728101-856f4ea42174?w=1200&q=80",
@@ -60,24 +63,55 @@ export const photos: Record<string, PhotoEntry> = {
     blurDataURL: blur,
   },
   eventoAnfiteatro: {
-    src: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1600&q=80",
-    width: 1600,
-    height: 900,
-    alt: "Evento en el anfiteatro de La Cantera",
+    src: "/images/evento-anfiteatro-balcarce.jpg",
+    width: 1020,
+    height: 1024,
+    alt: "Anfiteatro y patio interno de La Cantera Office en Balcarce",
     blurDataURL: blur,
+    objectPosition: "center center",
   },
   espacioColaboracion: {
-    src: "https://images.unsplash.com/photo-1517502884422-41eaead166d4?w=1200&q=80",
-    width: 1200,
-    height: 800,
-    alt: "Área de colaboración y trabajo en equipo",
+    src: "/images/evento-salon-dean-funes.jpg",
+    width: 682,
+    height: 1024,
+    alt: "Salón de eventos de La Cantera Workspace en Deán Funes con pantalla y butacas",
     blurDataURL: blur,
+    objectPosition: "center center",
   },
   descuentoResidente: {
-    src: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&q=80",
-    width: 800,
-    height: 1067,
-    alt: "Edificio residencial en Salta",
+    src: "/images/descuento-residente.jpg",
+    width: 682,
+    height: 1024,
+    alt: "Fachada de La Cantera Workspace con vidriera y señalética en Deán Funes",
     blurDataURL: blur,
+    objectPosition: "center center",
   },
 };
+
+export const sedeDeanFunesGallery: PhotoEntry[] = [
+  photos.sedeDeanFunes,
+  {
+    src: "/images/sede-dean-funes-02-espacio.jpg",
+    width: 682,
+    height: 1024,
+    alt: "Espacio de coworking con señalética La Cantera en Deán Funes",
+    blurDataURL: blur,
+    objectPosition: "center center",
+  },
+  {
+    src: "/images/sede-dean-funes-03-salon.jpg",
+    width: 682,
+    height: 1024,
+    alt: "Salón con butacas y pantalla en La Cantera Workspace",
+    blurDataURL: blur,
+    objectPosition: "center center",
+  },
+  {
+    src: "/images/sede-dean-funes-04-trabajo.jpg",
+    width: 682,
+    height: 1024,
+    alt: "Estación de trabajo en La Cantera Workspace, Deán Funes",
+    blurDataURL: blur,
+    objectPosition: "center 40%",
+  },
+];

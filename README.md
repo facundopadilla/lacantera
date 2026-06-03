@@ -2,7 +2,7 @@
 
 Aplicación web para **La Cantera**, coworking en Salta, Argentina con dos sedes:
 - **Deán Funes 1380** — La Cantera Workspace (330m², 60 estaciones, salón de eventos)
-- **Balcarce 735** — La Cantera Office (20 oficinas privadas, anfiteatro para 45)
+- **Balcarce 735** — La Cantera Office (20 oficinas privadas, patios internos, anfiteatro para 45)
 
 ## Stack
 
