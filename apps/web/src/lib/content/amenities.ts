@@ -18,9 +18,37 @@ export const amenities: Amenity[] = [
   },
   {
     id: "bar",
-    nombre: "Bar incluido",
-    descripcion: "Café, mate, té, leche y snacks. Cerveza incluida al final del día.",
+    nombre: "Barra y cocina equipada",
+    descripcion: "Café, mate, té, infusiones y cereales gratis. Cocina equipada para tus pausas.",
     icon: "Coffee",
+    sedes: ["dean-funes", "balcarce"],
+  },
+  {
+    id: "climatizacion",
+    nombre: "Ambiente climatizado",
+    descripcion: "Espacios climatizados todo el año para trabajar cómodo.",
+    icon: "AirVent",
+    sedes: ["dean-funes", "balcarce"],
+  },
+  {
+    id: "limpieza",
+    nombre: "Servicio de limpieza",
+    descripcion: "Limpieza diaria de todos los espacios.",
+    icon: "Sparkles",
+    sedes: ["dean-funes", "balcarce"],
+  },
+  {
+    id: "recepcion",
+    nombre: "Recepción Lun a Vie",
+    descripcion: "Recepción de lunes a viernes de 9 a 18 hs.",
+    icon: "ConciergeBell",
+    sedes: ["dean-funes", "balcarce"],
+  },
+  {
+    id: "cobertura-medica",
+    nombre: "Cobertura médica",
+    descripcion: "Cobertura médica MEDISEM incluida en tu membresía.",
+    icon: "HeartPulse",
     sedes: ["dean-funes", "balcarce"],
   },
   {
@@ -33,7 +61,7 @@ export const amenities: Amenity[] = [
   {
     id: "sala-reuniones",
     nombre: "Sala de reuniones",
-    descripcion: "4 horas mensuales incluidas en tu membresía. Horas adicionales con descuento.",
+    descripcion: "Sala equipada con pantalla y videoconferencia para tus reuniones.",
     icon: "Users",
     sedes: ["dean-funes", "balcarce"],
   },

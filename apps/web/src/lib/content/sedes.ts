@@ -47,13 +47,18 @@ export const sedes: Sede[] = [
       {
         nombre: "Sala de reuniones",
         descripcion:
-          "Sala para 8 personas con pantalla y videoconferencia. 4 hs/mes incluidas.",
+          "Sala para 8 personas con pantalla y videoconferencia.",
         icon: "Presentation",
       },
       {
         nombre: "Salón de eventos",
         descripcion: "Salón para ~40 personas ideal para capacitaciones y presentaciones.",
         icon: "PartyPopper",
+      },
+      {
+        nombre: "Cocina equipada",
+        descripcion: "Cocina completa con infusiones y cereales gratis para tus pausas.",
+        icon: "Coffee",
       },
       {
         nombre: "Phone booth",
@@ -95,12 +100,12 @@ export const sedes: Sede[] = [
       {
         nombre: "Sala de reuniones",
         descripcion:
-          "Sala para 10 personas. 4 hs/mes incluidas con tu membresía.",
+          "Sala para 10 personas con pantalla y videoconferencia.",
         icon: "Presentation",
       },
       {
         nombre: "Cocina equipada",
-        descripcion: "Cocina completa para los momentos de descanso.",
+        descripcion: "Cocina completa con infusiones y cereales gratis para los momentos de descanso.",
         icon: "Coffee",
       },
       {
