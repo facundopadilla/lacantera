@@ -73,6 +73,16 @@ function WhatsappIcon({ size = 14 }: { size?: number }) {
   );
 }
 
+function GlobeIcon({ size = 14 }: { size?: number }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+      <circle cx="12" cy="12" r="10" />
+      <path d="M2 12h20" />
+      <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+    </svg>
+  );
+}
+
 // Activar Facebook, LinkedIn y TikTok reemplazando null por la URL real cuando tengan perfil
 const redesActivas = [
   { label: "Instagram", href: "https://www.instagram.com/lacanteraworkspace/", Icon: InstagramIcon },
@@ -193,17 +203,37 @@ export function Footer() {
           </div>
         </div>
 
-        <p className="mt-6 text-center text-[11px] text-stone-cream/45">
-          Desarrollada por{" "}
+        <div className="mt-6 flex items-center justify-center gap-2 text-xs text-stone-cream/45">
+          <span>Desarrollada por Facundo Padilla</span>
+          <span className="text-stone-cream/25" aria-hidden>|</span>
+          <a
+            href="https://www.linkedin.com/in/facundopadilla"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn de Facundo Padilla"
+            className="hover:text-copper transition-colors"
+          >
+            <LinkedinIcon size={15} />
+          </a>
+          <a
+            href="https://wa.me/5493874829183"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="WhatsApp de Facundo Padilla"
+            className="hover:text-copper transition-colors"
+          >
+            <WhatsappIcon size={15} />
+          </a>
           <a
             href="https://facundopadilla.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-stone-cream/60 hover:text-copper underline-offset-2 hover:underline transition-colors"
+            aria-label="Sitio web de Facundo Padilla"
+            className="hover:text-copper transition-colors"
           >
-            Facundo Padilla
+            <GlobeIcon size={15} />
           </a>
-        </p>
+        </div>
       </Container>
     </footer>
   );
