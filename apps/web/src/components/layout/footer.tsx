@@ -192,6 +192,18 @@ export function Footer() {
             </Link>
           </div>
         </div>
+
+        <p className="mt-6 text-center text-[11px] text-stone-cream/45">
+          Desarrollada por{" "}
+          <a
+            href="https://facundopadilla.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-stone-cream/60 hover:text-copper underline-offset-2 hover:underline transition-colors"
+          >
+            Facundo Padilla
+          </a>
+        </p>
       </Container>
     </footer>
   );

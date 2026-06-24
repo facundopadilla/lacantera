@@ -11,7 +11,6 @@ import { Button } from "@/components/ui/button";
 import { Eyebrow } from "@/components/ui/eyebrow";
 import { Photo } from "@/components/ui/photo";
 import { PhotoCarousel } from "@/components/ui/photo-carousel";
-import { LetterGrid } from "@/components/brand/letter-tile";
 import { MotionSection } from "@/components/motion/motion-section";
 import { MotionStaggerGrid } from "@/components/motion/motion-stagger-grid";
 import { StickyTabs } from "@/components/motion/sticky-tabs";
@@ -203,21 +202,6 @@ export default function SedesPage() {
                   </MotionStaggerGrid>
                 </Container>
               </Section>
-
-              {/* Sistema letras Balcarce */}
-              {sede.id === "balcarce" && (
-                <Section tone="dark" spacing="md">
-                  <Container>
-                    <MotionSection as="div">
-                      <Eyebrow tone="light" className="mb-4">Las 20 oficinas de La Cantera Office</Eyebrow>
-                      <p className="text-neutral-400 text-sm mb-6 max-w-lg">
-                        Cada oficina tiene su letra y su color.
-                      </p>
-                      <LetterGrid />
-                    </MotionSection>
-                  </Container>
-                </Section>
-              )}
             </div>
           );
         })}
