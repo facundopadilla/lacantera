@@ -26,7 +26,7 @@ export function EventosTeaser() {
               </p>
             </div>
           </div>
-          <Button href="/eventos" variant="outline" size="md" className="shrink-0">
+          <Button href="/eventos" variant="outline" size="md" className="shrink-0 self-center md:self-auto">
             Ver espacios para eventos
             <ArrowRight size={16} />
           </Button>

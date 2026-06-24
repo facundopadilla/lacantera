@@ -14,6 +14,11 @@ interface MarqueeProps {
   variant?: "light" | "dark";
 }
 
+// Soft fade on the left/right edges so chips ease in and out
+// instead of cutting off abruptly.
+const EDGE_FADE =
+  "linear-gradient(to right, transparent 0, #000 6%, #000 94%, transparent 100%)";
+
 export function Marquee({ items, speed = 40, className, variant = "light" }: MarqueeProps) {
   const reduced = useReducedMotion();
   const controlsForward = useAnimation();
@@ -65,6 +70,7 @@ export function Marquee({ items, speed = 40, className, variant = "light" }: Mar
   return (
     <div
       className={"overflow-hidden w-full " + (className ?? "")}
+      style={{ WebkitMaskImage: EDGE_FADE, maskImage: EDGE_FADE }}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >

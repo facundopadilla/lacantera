@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X, MapPin, Package, CalendarDays, MessageCircle } from "lucide-react";
+import { Menu, X, Home, MapPin, Package, CalendarDays, MessageCircle } from "lucide-react";
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Logo } from "@/components/brand/logo";
@@ -11,6 +11,7 @@ import { cn } from "@/lib/utils";
 import type { LucideIcon } from "lucide-react";
 
 const navLinks: Array<{ href: string; label: string; Icon: LucideIcon }> = [
+  { href: "/",         label: "Inicio",    Icon: Home },
   { href: "/sedes",    label: "Espacios",  Icon: MapPin },
   { href: "/planes",   label: "Planes",    Icon: Package },
   { href: "/eventos",  label: "Eventos",   Icon: CalendarDays },

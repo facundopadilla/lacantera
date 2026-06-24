@@ -18,6 +18,7 @@ const manrope = Manrope({
 
 export const viewport: Viewport = {
   themeColor: "#2A2520",
+  viewportFit: "cover",
 };
 
 export const metadata: Metadata = {
